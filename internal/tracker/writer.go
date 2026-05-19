@@ -9,8 +9,6 @@ import (
 	"time"
 )
 
-const descriptionWidth = 35 // max width for description column before wrapping
-
 func WrapText(text string, width int) []string {
 	words := strings.Fields(strings.TrimSpace(text))
 	if len(words) == 0 {
@@ -49,6 +47,8 @@ func WriteLogFile(path string, entries []Entry) error {
 		return err
 	}
 	defer file.Close()
+
+	const descriptionWidth = 35 // max width for description column before wrapping
 
 	writer := bufio.NewWriter(file)
 

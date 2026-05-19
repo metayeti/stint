@@ -66,7 +66,7 @@ Basically, for every task on your project, run `stint "My Project"`, when you're
 
 ## Note
 
-Parts of this project were coded using Gemini and there may be bugs. This program has not yet been battle tested, so don't trust it with critical stuff just yet.
+Parts of this project were coded using Gemini. The program should be stable but it has not yet been battle tested so don't trust it with critical stuff just yet.
 
 ## License
 
