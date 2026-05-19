@@ -2,11 +2,11 @@
 
 **stint** /stɪnt/ (_noun_): A fixed or limited period of time spent doing a particular job or activity.
 
+![stint](dev/screenshot.png)
+
 This is a very lightweight, command-line based time tracker written in Go. Its primary function is to track the amount of time you spend on tasks.
 
 No accounts, no databases, no telemetry, no complex admin panels with hundred billion features, just the command line and you. The output is a simple textfile with an ASCII-formatted table.
-
-![stint](dev/screenshot.png)
 
 ## Installation
 
