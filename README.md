@@ -1,6 +1,6 @@
 # stint
 
-This is a very simple and lightweight command line based time tracker written in Go. It tracks the amount of time you spend on tasks.
+This is a very lightweight, command-line based time tracker written in Go. It primary function is to track the amount of time you spend on tasks.
 
 No accounts, no databases, no telemetry, no complex admin panels with hundred billion features, just the command line and you. The output is a simple textfile with an ASCII-formatted table.
 
