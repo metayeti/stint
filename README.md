@@ -1,5 +1,7 @@
 # stint
 
+**stint** /stɪnt/ (_noun_): A fixed or limited period of time spent doing a particular job or activity.
+
 This is a very lightweight, command-line based time tracker written in Go. Its primary function is to track the amount of time you spend on tasks.
 
 No accounts, no databases, no telemetry, no complex admin panels with hundred billion features, just the command line and you. The output is a simple textfile with an ASCII-formatted table.
@@ -58,11 +60,11 @@ An example log will look something like this:
 +--------------+---------------+-------------------------------------+----------------------+
 ```
 
-Basically, for every task on your project, run `stint "My Project"`, when you're done describe what you just did, and stint will track time for you.
+Basically, for every task on your project, run `stint "My Project"`, when you're done describe what you just did, and let stint track time for you.
 
 ## Note
 
-Parts of this project were coded using Gemini and there may be bugs. This program has yet to be battle tested as of now, so don't trust it with critical stuff just yet.
+Parts of this project were coded using Gemini and there may be bugs. This program has not yet been battle tested, so don't trust it with critical stuff just yet.
 
 ## License
 
