@@ -9,6 +9,8 @@ import (
 	"time"
 )
 
+const descriptionWidth = 35 // max width for description column before wrapping
+
 func WrapText(text string, width int) []string {
 	words := strings.Fields(strings.TrimSpace(text))
 	if len(words) == 0 {
@@ -50,8 +52,8 @@ func WriteLogFile(path string, entries []Entry) error {
 
 	writer := bufio.NewWriter(file)
 
-	sep := fmt.Sprintf("+--------------+---------------+-%s-+----------------------+\n", strings.Repeat("-", DescriptionWidth))
-	rowFmt := "| %-12s | %-13s | %-" + strconv.Itoa(DescriptionWidth) + "s | %-20s |\n"
+	sep := fmt.Sprintf("+--------------+---------------+-%s-+----------------------+\n", strings.Repeat("-", descriptionWidth))
+	rowFmt := "| %-12s | %-13s | %-" + strconv.Itoa(descriptionWidth) + "s | %-20s |\n"
 
 	var totalDuration time.Duration
 
@@ -60,7 +62,7 @@ func WriteLogFile(path string, entries []Entry) error {
 	writer.WriteString(sep)
 
 	for _, entry := range entries {
-		descLines := WrapText(entry.Description, DescriptionWidth)
+		descLines := WrapText(entry.Description, descriptionWidth)
 
 		writer.WriteString(fmt.Sprintf(rowFmt, entry.Date, entry.TimeSpan, descLines[0], FormatCustomDuration(entry.Duration)))
 

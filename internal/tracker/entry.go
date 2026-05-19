@@ -8,6 +8,3 @@ type Entry struct {
 	Description string
 	Duration    time.Duration
 }
-
-// max width for description column before wrapping
-const DescriptionWidth = 35
