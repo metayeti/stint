@@ -22,7 +22,7 @@ You can also compile the binaries manually:
 # windows
 go build -o stint.exe ./cmd/stint
 # linux / mac
-go build -o stint ./cmd/sting
+go build -o stint ./cmd/stint
 ```
 
 Or you can grab the binaries from [releases](https://github.com/metayeti/stint/releases).
