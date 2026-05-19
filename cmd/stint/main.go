@@ -1,16 +1,10 @@
-/*       _   _       _
- *   ___| |_(_)_ __ | |_
- *  / __| __| | '_ \| __|
- *  \__ \ |_| | | | | |_
- *  |___/\__|_|_| |_|\__|
- *
- *
+/*
  *  stint (noun): A fixed or limited period of time spent doing a particular
  *                job or activity.
  *
  *  ---
  *
- *  This is a very simple command-line time tracking utility for developers.
+ *  This is a (very) simple command-line time tracking utility for developers.
  *  It tracks the amount of time you spend on tasks.
  *
  *  To use, run: stint "your task"
@@ -36,7 +30,7 @@ import (
 )
 
 const appName = "stint"
-const appVersion = "v0.9.9"
+const appVersion = "v1.0.0"
 
 const outputDir = "logs"
 
@@ -51,7 +45,7 @@ func main() {
 	const prefix = orange + ">>" + reset;
 
 	if len(os.Args) < 2 {
-		fmt.Println("Usage: stint \"task name\"")
+		fmt.Println("Usage: stint \"project name\"")
 		return
 	}
 
@@ -82,7 +76,7 @@ func main() {
 		"\n%s Tracking started for \"%s\" at %s\n\n", 
 		prefix,
 		taskName,
-		startTime.Format("15:04:01"),
+		startTime.Format("15:04:05"),
 	)
 	fmt.Println("Press [ENTER] to stop timing ...")
 
@@ -97,6 +91,9 @@ func main() {
 
 	fmt.Print("Describe the task you just did: ")
 	description, _ := reader.ReadString('\n')
+
+	// clean the string
+	description = stripEmojis(description)
 	description = strings.TrimSpace(description)
 
 	if description == "" {

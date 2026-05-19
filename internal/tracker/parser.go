@@ -122,7 +122,7 @@ func ParseLogFile(path string) []Entry {
 		}
 	}
 
-	// Catch any trailing entry left in memory when the scanner finishes
+	// catch any trailing entry left in memory when the scanner finishes
 	if currentEntry != nil {
 		entries = append(entries, *currentEntry)
 	}

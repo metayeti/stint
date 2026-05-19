@@ -64,10 +64,6 @@ An example log will look something like this:
 
 Basically, for every task on your project, run `stint "My Project"`, when you're done describe what you just did, and let stint track time for you.
 
-## Note
-
-Parts of this project were coded using Gemini. The program should be stable but it has not yet been battle tested so don't trust it with critical stuff just yet.
-
 ## License
 
 Copyright &copy; 2026 Danijel Durakovic
