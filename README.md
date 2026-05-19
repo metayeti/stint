@@ -6,6 +6,8 @@ This is a very lightweight, command-line based time tracker written in Go. Its p
 
 No accounts, no databases, no telemetry, no complex admin panels with hundred billion features, just the command line and you. The output is a simple textfile with an ASCII-formatted table.
 
+![stint](dev/screenshot.png)
+
 ## Installation
 
 If you have the Go SDK installed, you can build and register the application globally very simply:
